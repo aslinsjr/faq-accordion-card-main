@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  width: 900px;
+  height: 500px;
+  border-radius: 20px;
+  margin: 3rem auto;
+  background-color: white;
+  overflow: hidden;
+}
+
+.img-container {
+  background-image: url(images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: top -300px right 60px;
+}
+
+#illustration-image {
+ position: relative;
+ top: 70px;
+ left: -70px;
+}
+
+#box-image {
+  width: 190px;
+  height: 190px;
+  position: relative;
+  left: 140px;
+  top: -370px;
+  z-index: 1;
+}
+
+.text-container {
+  padding: 2rem;
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description-container {
+  width: 100%;
+  font-size: 12px;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+summary {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+details>summary { 
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none
+}
+  
+summary::after {
+  content: ' v';
+  font-size: 0.8rem;
+  color: #df5c34;
+  font-weight: 700;
+}
+
+details[open] summary {
+  font-weight: 700;
+}
+  
+details[open] summary:after {
+  content: " ^";
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+details p {
+  margin-top: 0.5rem;
+}
+
+.line {
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
+  margin: 1rem 0;
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center;
+  padding: 0.5rem;
+  color: white;
+}
+
+.attribution a {
+  color: hsl(230, 58%, 10%); 
+}
+
+/* Mobile */
+
+@media screen and (max-width:500px) {
+
+  body {
+    overflow:auto;
+    height: fit-content;
+  }
+  
+  .container {
+    flex-direction:column;
+    width: 350px;
+    overflow:visible;
+    margin-top: 10rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-container{
+    background-image: url(images/bg-pattern-mobile.svg);
+    background-position: top 20px right 55px;
+  }
+
+  #illustration-image {
+    width: 280px;
+    top: -125px;
+    left: 0;
+  }
+
+  #box-image {
+    width: 120px;
+    height: 120px;
+    left: 30px;
+    top: -630px;
+  }
+
+  .text-container {
+    padding: 1rem;
+    width: 250px;
+    margin: -100px auto 50px auto;
+    align-items: center;
+  }
+
+}
